@@ -69,6 +69,9 @@ pinecone.init(
 embeddings = SentenceTransformerEmbeddings(model_name="all-mpnet-base-v2")
 index = pinecone.Index('langchain-chatbot-v2')
 
+if st.button("Reset"):
+    index.delete(delete_all=True)
+
 for idx, uploaded_file in enumerate(uploaded_files):
     if uploaded_file:
         temp_file = f'{temp_file_base}_{idx}.pdf'  
