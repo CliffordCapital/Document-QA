@@ -1,0 +1,12 @@
+streamlit
+streamlit_chat
+langchain
+sentence_transformers
+huggingface_hub
+pinecone-client
+openai
+pypdf
+torch
+accelerate
+faiss-cpu
+langchain-community
