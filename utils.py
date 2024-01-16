@@ -13,7 +13,7 @@ openai.api_key = ""
 #model = SentenceTransformer('multi-qa-distilbert-cos-v1')
 #model = SentenceTransformer('all-mpnet-base-v2')
 
-pinecone.init(api_key='09d08617-45d2-4ce8-b708-d8291d5570d6', environment='gcp-starter')
+pinecone.init(api_key='d1c86b91-6342-4eba-bf22-bff2a07413d9', environment='gcp-starter')
 index = pinecone.Index('langchain-chatbot-v2')
 
 if st.button("Reset"):
