@@ -81,28 +81,6 @@ for idx, uploaded_file in enumerate(uploaded_files):
         # Add documents to the existing index
         index = Pinecone.from_documents(docs, embeddings, index_name=index_name)
 
-'''
-temp_file = 'tmp'
-for uploaded_file in uploaded_files:
-    if uploaded_file:
-        # Append the name of the uploaded file to the file_list
-        with open(temp_file, "wb") as file:
-            file.write(uploaded_file.getvalue())
-            file_name = uploaded_file.name
-        loader = PyPDFLoader(temp_file)
-        pages = loader.load_and_split()
-        docs = split_docs(pages)
-        pinecone.init(
-           api_key="09d08617-45d2-4ce8-b708-d8291d5570d6",  # find at app.pinecone.io
-           environment="gcp-starter"  # next to api key in console
-        )
-        ##embeddings = SentenceTransformerEmbeddings(model_name="multi-qa-distilbert-cos-v1")
-        embeddings = SentenceTransformerEmbeddings(model_name="all-mpnet-base-v2")
-        index = Pinecone.from_documents(docs, embeddings, index_name=index_name)
-
-#index_name = "langchain-chatbot"
-#index = Pinecone.from_documents(docs, embeddings, index_name=index_name)
-'''
 option = st.selectbox("common prompts", ("Summarize from context", "Analyse from context"))
 
 if option:
