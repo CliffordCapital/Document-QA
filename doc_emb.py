@@ -27,7 +27,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="multi-qa-distilbert-cos-v
 
 # initialize pinecone
 pinecone.init(
-    api_key="09d08617-45d2-4ce8-b708-d8291d5570d6",  # find at app.pinecone.io
+    api_key="d1c86b91-6342-4eba-bf22-bff2a07413d9",  # find at app.pinecone.io
     environment="gcp-starter"  # next to api key in console
 )
 
