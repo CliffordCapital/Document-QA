@@ -54,7 +54,7 @@ def query_refiner(query):
     generator = pipeline('text-generation', model = "EleutherAI/gpt-neo-1.3B")
 
     prompt = f"Given the following user query, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base. \n\nQuery: {query}\n\nRefined Query:"
-    refined_query = generator(prompt, max_length=256, temperature = 0.7, top_k = 30, top_p = 0.5, num_return_sequences=1)[0]['generated_text']
+    refined_query = generator(prompt, max_length=56, temperature = 0.7, top_k = 30, top_p = 0.5, num_return_sequences=1)[0]['generated_text']
 
     return refined_query
     
