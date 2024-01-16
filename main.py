@@ -130,7 +130,8 @@ with textcontainer:
         with st.spinner("typing..."):
             conversation_string = get_conversation_string()
             # st.code(conversation_string)
-            refined_query = query_refiner(query)
+            #refined_query = query_refiner(query)
+            refined_query = query
             st.subheader("Refined Query:")
             st.write(refined_query)
             context = find_match(refined_query)
